@@ -1,0 +1,31 @@
+.container ul li {
+	list-style:none;
+}
+.container ul li a{
+	font-size:22px;
+	color:#000;
+}
+.container ul li p{
+	font-size:20px;
+	margin-top:30px;
+	padding-left:20px;
+}
+.formulario{
+	text-align:center;
+}
+.formulario input{
+	width:80%;
+	margin-top: 20px;
+	padding:12px 12px;
+	border:none;
+	border-bottom:2px #ccc solid;
+}
+.formulario textarea{
+	width:80%;
+	margin-top: 20px;
+	padding:12px 12px;
+	min-height:200px;
+}
+.formulario p{
+	font-size:20px;
+}

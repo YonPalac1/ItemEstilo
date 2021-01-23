@@ -1,0 +1,274 @@
+*{
+	padding:0;
+	margin:0;
+	font-family:celtic;
+}
+.container .title{
+	text-align:center;
+}
+.header{
+	position: sticky;
+	top:0;
+	z-index:1000;
+}
+.head{
+	background:#fff;
+}
+.head ul{
+	background:#000;
+}
+.head ul li a{
+	color:#fff;
+	margin:5px;
+	margin-right:10px;
+	font-size:20px;
+}
+.header h1 a{
+	text-decoration:none;
+}
+.header .nav{
+	background: rgba(255,255,255,0.5);
+}
+.header .nav a{
+	margin:20px;
+	color:#000;
+	font-weight:bold;
+	font-size:20px;
+}
+.header .redes{
+	display:flex;
+	align-items:center;
+}
+.header .redes i{
+	font-size:25px;
+	color: #000;
+}
+.header .redes i:hover{
+	font-size:25px;
+	color:#aaa;
+}
+
+.header .title h1{
+	font-size: 90px;
+}
+.sectionButtons{
+	border-top: 2px solid #ccc;
+	padding:20px;
+}
+.sectionButtons .col-sm{
+	border: 2px solid #ccc;
+	height:100px;
+	cursor:pointer;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+.sectionButtons .col-sm div{
+	flex-direction:column;
+	
+}
+.sectionButtons .col-sm:hover{
+	background:#FDF2E9;
+}
+
+.sectionButtons .col-sm i{
+	background:#EAECEE;
+	border-radius:50%;
+	color:#000;
+	padding:20px;
+	margin-right:20px;
+}
+.sectionButtons .col-sm:hover i{
+	background:#FDEBD0;
+}
+.categorias a{
+	margin:20px;
+	color:#000;
+	font-weight:bold;
+}
+.grid {
+	position: relative;
+	width: 100%;
+	opacity: 0;
+	transition: opacity 0.5s linear 1s;
+	max-width:1080px;
+	margin:auto;
+}
+
+.grid.imagenes-cargadas {
+	opacity: 1;
+}
+
+.grid .item {
+	position: absolute;
+	display: block;
+	padding: 0;
+	margin: 10px;
+	width: calc(33.333333% - 20px);
+	flex-direction:column;
+}
+
+.grid .item-contenido {
+	position: relative;
+}
+
+.grid .item img {
+	width: 100%;
+	cursor: pointer;
+	vertical-align: top;
+}
+.grid form {
+	position:absolute;
+}
+.grid form .btn{
+	display:none;
+}
+/* ------------------------- */
+/* Overlay */
+/* ------------------------- */
+.overlay {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	display: none;
+	flex-direction: column;
+}
+.overlay.activo{
+	display:block;
+}
+
+
+.overlay img {
+	max-width: 100%;
+	width:400px;
+	height:500px;
+}
+
+.overlay .infoProducto p{
+	font-size:20px;
+}
+.overlay a{
+	color:#000;
+	padding:8px 12px;
+	display:flex;
+	align-items:center;
+}
+.overlay a:hover{
+	text-decoration:none;
+}
+.overlay a i{
+	font-size:30px;
+	color:#aaa;
+	width:50px;
+}
+.overlay button{
+	padding:10px 12px;
+	border:none;
+	background:orange;
+}
+.contenedor-img {
+	position: relative;
+	display:block;
+}
+
+.overlay #btn-cerrar-popup {
+	background: none;
+	font-size: 20px;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	position: absolute;
+	right: -20px;
+	top: -20px;
+}
+/* ------------------------- */
+/* Footer */
+/* ------------------------- */
+.redesFooter{
+	background:#ccc;
+	height:200px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	margin-bottom:0;
+}
+.redesFooter .container .row ul{
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	bottom:0;
+}
+.redesFooter .container .row ul li{
+	list-style:none;
+}
+.redesFooter .container .row ul .contenedor-icono a{
+	color: #fff;
+	margin: 20px;
+	text-align: center;
+	align-items:center;
+	justify-content:center;
+	border-radius: 100px;
+	transition: .3s ease all;
+	width: 100px;
+	height: 100px;
+	padding:20px;
+}
+.redesFooter .container .row ul .contenedor-icono .twitter {
+	background: #1da1f2;
+}
+.redesFooter .container .row ul .contenedor-icono .facebook {
+	background: #3b5998;
+}
+.redesFooter .container .row ul .contenedor-icono .instagram {
+	background: #c13584;
+}
+
+.redesFooter .container .row ul .contenedor-icono:hover {
+	animation: icono .5s ease;
+}
+
+@keyframes icono {
+	from {
+		transform: rotate3d(0,0,0,0);
+	}
+	to {
+		transform: rotate3d(0,1,0, 360deg);
+	}
+}
+
+.jumbotron{
+	position:absolute;
+	z-index:5000;
+	width:1000px;
+	top:-320px;
+	right:0;
+	display:none;
+}
+.jumbotron.activo{
+	display:block;
+}
+.jumbotron a{ 
+	color:#fff;
+	margin:10px;
+	background:#000;
+	border: 2px solid #fff;
+	width:fit-content;
+	float:left;
+}
+.jumbotron img{
+	width:200px;
+	height:250px;
+}
+.jumbotron .col-sm .infoProducto{
+	height:200px;
+}
+
+@media screen and (max-width: 700px) {
+	.grid .item {
+		width: calc(50% - 20px);
+	}
+
+	header .barra-busqueda {
+		width: 100%;
+	}
+}
